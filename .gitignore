@@ -1,0 +1,159 @@
+# ==============================================================================
+# .gitignore for the AI Engineering Journey
+# Tuned to the 2026 stack in AI_Engineer_Roadmap.md:
+# Python, venvs, FastAPI, Docker, Jupyter, PyTorch, Hugging Face, vector DBs, evals
+# ==============================================================================
+
+# ------------------------------- Secrets --------------------------------------
+# NEVER commit API keys, LLM provider credentials, or config secrets.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.*
+credentials.*
+
+# ------------------------------- Python ---------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ------------------------ Virtual environments --------------------------------
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.python-version
+
+# --------------------------- Package managers ---------------------------------
+pip-log.txt
+pip-delete-this-directory.txt
+.uv/
+poetry.lock
+.pdm.toml
+
+# ------------------------------- Testing --------------------------------------
+.pytest_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.cover
+.hypothesis/
+
+# ------------------------------ Type / lint -----------------------------------
+.mypy_cache/
+.dmypy.json
+.pyre/
+.ruff_cache/
+
+# ------------------------------- Jupyter --------------------------------------
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+profile_default/
+ipython_config.py
+
+# ---------------------- Data science / ML foundations -------------------------
+# Keep large/generated data and datasets out of git.
+data/
+datasets/
+*.csv
+*.tsv
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.npy
+*.npz
+!**/sample_data/**
+!**/fixtures/**
+
+# ------------------- Deep learning / models / fine-tuning ---------------------
+# Model weights, checkpoints, LoRA/QLoRA adapters — too big for git.
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.gguf
+*.bin
+*.onnx
+checkpoints/
+runs/
+wandb/
+mlruns/
+lightning_logs/
+outputs/
+
+# Hugging Face caches
+.cache/
+huggingface/
+transformers_cache/
+
+# ------------------------- RAG / vector databases -----------------------------
+# Local vector stores and indexes are generated artifacts.
+*.faiss
+*.index
+chroma/
+.chroma/
+qdrant_storage/
+.lancedb/
+storage/
+
+# ----------------------------- Docker -----------------------------------------
+# (Dockerfiles/compose ARE committed; ignore local override + build noise)
+docker-compose.override.yml
+
+# -------------------------- Databases (local) ---------------------------------
+*.db
+*.sqlite
+*.sqlite3
+
+# ---------------------- FastAPI / web app runtime -----------------------------
+*.log
+logs/
+.pid
+*.sock
+
+# ------------------------------- Node / JS ------------------------------------
+# For optional full-stack / Vercel AI SDK work (TypeScript).
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.next/
+.vercel/
+
+# -------------------------------- IDE / OS ------------------------------------
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
