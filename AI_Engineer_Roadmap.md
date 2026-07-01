@@ -75,22 +75,12 @@ Eleven phases. Each builds on the last. Tools listed are the 2026-current defaul
 - Data structures: lists, dicts, sets, tuples — and *when* to use each
 - Strings, files, I/O
 - Error handling (try/except) and debugging
-- Object-oriented programming — a deep module, learned in this order (simple → advanced):
-  - **Classes & objects:** defining a class, creating objects, instance variables, and instance methods
-  - **Constructors:** the constructor concept — default vs. parameterized constructors
-  - **Object model & introspection:** `__dict__`, `dir()`, importing a class from another module, and how Python passes objects (pass-by-reference vs. pass-by-value — i.e. mutable vs. immutable behavior)
-  - **Overloading:** method overloading, constructor overloading, and operator overloading
-  - **Encapsulation:** public vs. private variables, private methods, and getter/setter methods
-  - **Class-level members:** static variables, static methods, class methods, and the factory-method pattern
-  - **Inheritance (is-a):** single, hierarchical, multi-level, and multiple inheritance
-  - **Polymorphism & overriding:** method overriding, variable overriding, and customizing objects with dunder methods like `__str__()`
-  - **Composition (has-a):** modeling has-a relationships between classes
-  - **Abstraction:** abstract classes and abstract methods
+- Object-oriented programming: Class, Object, Default Constructor, Parameterized Constructor, Instance Variable, Instance Method, Constructor, __dict__, dir(), Import Class, Pass by refernece, Pass by value, Method Overloading, Constructor Overloading, Operator Overloading, Encapsulation, Public and Private Variable, getter-setter method, Priavate method, Static Variable, Static Method, Class Method, Creating Factory Method, Static Method, Inheritance, is-a relationship, Single-inheritance, Hierarchical Inheritance, Multi-level Inheritance, Multiple-Inheritance, Variable Overriding, Method Overriding, __str()__, Has-A relationship, Abstract Class & Method
 - Comprehensions, iterators, generators
 - The standard library + `pip` and virtual environments
 - Clean code habits: naming, functions that do one thing, type hints
 - **Milestone projects:** (1) a CLI tool (e.g., a task tracker), (2) a script that reads/transforms a data file, (3) a small program calling a public web API.
-- **Gate:** Given a plain-English spec, you can write a ~100-line Python program from scratch that uses well-structured classes (applying inheritance and encapsulation), file I/O, and error handling.
+- **Gate:** Given a plain-English spec, you can write a ~100-line Python program with classes, file I/O, and error handling, from scratch.
 
 ---
 
