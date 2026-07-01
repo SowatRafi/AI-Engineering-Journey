@@ -78,5 +78,67 @@ for word in only_happy(["yay", "meh", "great", "boo", "nice"]):
     print("Happy word:", word)
 
 
+# ===========================================================================
+# MORE EXAMPLES — comprehensions
+# ===========================================================================
+print("\n========== MORE: COMPREHENSIONS ==========")
+
+# A dictionary comprehension: build a dict in one line
+square_map = {n: n * n for n in [1, 2, 3, 4]}
+print("Square map:", square_map)         # {1: 1, 2: 4, 3: 9, 4: 16}
+
+# A set comprehension: collect the unique word lengths
+lengths = {len(word) for word in ["hi", "bye", "yo"]}
+print("Unique lengths:", lengths)        # {2, 3}
+
+# Transform each item: add 10% tax to every price
+prices = [100, 200, 50]
+with_tax = [round(p * 1.1, 2) for p in prices]
+print("With tax:", with_tax)             # [110.0, 220.0, 55.0]
+
+
+# ===========================================================================
+# MORE EXAMPLES — generators
+# ===========================================================================
+print("\n========== MORE: GENERATORS ==========")
+
+# A generator expression (like a comprehension, but with () ) inside sum()
+total = sum(n for n in range(1, 6))      # 1 + 2 + 3 + 4 + 5
+print("Sum 1..5:", total)                # 15
+
+# A generator that hands out even numbers up to a limit
+def evens_up_to(limit):
+    n = 0
+    while n <= limit:
+        yield n
+        n = n + 2
+
+print("Evens up to 8:", list(evens_up_to(8)))    # [0, 2, 4, 6, 8]
+
+
+# ===========================================================================
+# EVEN SIMPLER EXAMPLES
+# ===========================================================================
+print("\n========== EVEN SIMPLER ==========")
+
+# Build a list of squares in one line
+squares = [n * n for n in [1, 2, 3]]
+print("Squares:", squares)               # [1, 4, 9]
+
+# Keep only the short names (5 letters or fewer)
+names = ["Ana", "Alexander", "Ben", "Christopher"]
+short = [name for name in names if len(name) <= 5]
+print("Short names:", short)             # ['Ana', 'Ben']
+
+# A tiny generator that counts down to 1
+def countdown(start):
+    while start > 0:
+        yield start
+        start = start - 1
+
+for number in countdown(3):
+    print("Countdown:", number)          # 3, 2, 1
+
+
 if __name__ == "__main__":
     print("\nComprehensions shorten loops; generators hand out values lazily.")
