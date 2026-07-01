@@ -75,7 +75,7 @@ Eleven phases. Each builds on the last. Tools listed are the 2026-current defaul
 - Data structures: lists, dicts, sets, tuples — and *when* to use each
 - Strings, files, I/O
 - Error handling (try/except) and debugging
-- Object-oriented programming: Class, Object, Default Constructor, Parameterized Constructor, Instance Variable, Instance Method, Constructor, __dict__, dir(), Import Class, Pass by refernece, Pass by value, Method Overloading, Constructor Overloading, Operator Overloading, Encapsulation, Public and Private Variable, getter-setter method, Priavate method, Static Variable, Static Method, Class Method, Creating Factory Method, Static Method, Inheritance, is-a relationship, Single-inheritance, Hierarchical Inheritance, Multi-level Inheritance, Multiple-Inheritance, Variable Overriding, Method Overriding, __str()__, Has-A relationship, Abstract Class & Method
+- Object-oriented programming: Class, Object, Default Constructor, Parameterized Constructor, Instance Variable, Instance Method, Constructor, __dict__, dir(), Import Class, Pass by reference, Pass by value, Method Overloading, Constructor Overloading, Operator Overloading, Encapsulation, Public and Private Variable, getter-setter method, Private method, Static Variable, Static Method, Class Method, Creating Factory Method, Inheritance, is-a relationship, Single-inheritance, Hierarchical Inheritance, Multi-level Inheritance, Multiple-Inheritance, Variable Overriding, Method Overriding, __str__(), Has-A relationship, Abstract Class & Method
 - Comprehensions, iterators, generators
 - The standard library + `pip` and virtual environments
 - Clean code habits: naming, functions that do one thing, type hints
