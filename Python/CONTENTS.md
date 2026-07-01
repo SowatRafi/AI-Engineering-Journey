@@ -62,6 +62,18 @@ python 01_basics/01_variables_and_types.py     # then the deeper lesson
 | **Environment** | `06_environment/01_standard_library.py` | math, random, json, collections, pathlib |
 | | `06_environment/02_pip_and_virtualenvs.md` | pip, venv, requirements.txt |
 | **Best Practices** | `07_best_practices/clean_code_and_type_hints.py` | PEP 8 naming, type hints, dataclasses |
+| **Built-in Functions** | `08_builtin_functions/01_type_constructors.py` | bool, int, float, complex, str, list, tuple, dict, set, frozenset, bytes, bytearray, memoryview, object |
+| | `08_builtin_functions/02_math_functions.py` | abs, divmod, pow, round, sum, min, max |
+| | `08_builtin_functions/03_numbers_and_characters.py` | bin, oct, hex, chr, ord, ascii, format |
+| | `08_builtin_functions/04_sequences_and_iterables.py` | len, range, slice, sorted, reversed, enumerate, zip, iter, next, all, any, map, filter, aiter, anext |
+| | `08_builtin_functions/05_object_inspection.py` | type, isinstance, issubclass, callable, dir, vars, id, hash, hasattr, getattr, setattr, delattr, repr |
+| | `08_builtin_functions/06_oop_helpers.py` | super, property, classmethod, staticmethod |
+| | `08_builtin_functions/07_io_and_dynamic.py` | print, input, open, eval, exec, compile, globals, locals, help, breakpoint, `__import__` |
+
+> The `08_builtin_functions/` lessons cover **all 71 documented Python built-in
+> functions**, grouped by purpose. Each file uses simple examples with
+> plain-language comments and prints every result — run a file to see the output
+> next to the code.
 
 ---
 
