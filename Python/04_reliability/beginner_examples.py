@@ -85,5 +85,78 @@ def total_price(prices):
 print("Final total:", total_price([2, 3, 5]))
 
 
+# ===========================================================================
+# MORE EXAMPLES — try / except
+# ===========================================================================
+print("\n========== MORE: TRY / EXCEPT ==========")
+
+# Example 5: try/except/else — 'else' runs only if there was NO error.
+def read_age(text):
+    try:
+        age = int(text)
+    except ValueError:
+        print(f"'{text}' is not a valid age.")
+    else:
+        print("Your age is", age)    # only runs when int() worked
+
+read_age("30")     # goes to else -> "Your age is 30"
+read_age("abc")    # goes to except
+
+
+# Example 6: catching two DIFFERENT errors separately
+def get_item(items, position):
+    try:
+        return items[position]
+    except IndexError:
+        return "that position doesn't exist"
+    except TypeError:
+        return "position must be a number"
+
+print(get_item(["a", "b"], 5))       # IndexError handled
+print(get_item(["a", "b"], "x"))     # TypeError handled
+
+
+# Example 7: a validation function that REFUSES bad input using raise
+def set_volume(level):
+    if level < 0 or level > 100:
+        raise ValueError("volume must be between 0 and 100")
+    return level
+
+try:
+    set_volume(150)
+except ValueError as problem:
+    print("Rejected:", problem)
+
+
+# ===========================================================================
+# EVEN SIMPLER EXAMPLES
+# ===========================================================================
+print("\n========== EVEN SIMPLER ==========")
+
+# Catch an error and show a friendly message
+try:
+    number = int("hello")            # this fails — "hello" is not a number
+except ValueError:
+    print("That was not a number!")
+
+# "Look before you leap": check first, so the error never happens
+letters = ["a", "b", "c"]
+position = 5
+if position < len(letters):
+    print(letters[position])
+else:
+    print("There is no item at position", position)
+
+# Give a backup value if a conversion fails
+def parse_int(text):
+    try:
+        return int(text)
+    except ValueError:
+        return 0                     # backup value when it's not a number
+
+print(parse_int("7"))                # 7
+print(parse_int("oops"))             # 0
+
+
 if __name__ == "__main__":
     print("\nHandling errors keeps your program running instead of crashing.")
